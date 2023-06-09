@@ -56,9 +56,18 @@ python3 segment/predict.py --weights "runs/train-seg/yolov7-seg2/weights/best.pt
 
 ## Custom Training
 
-- Move your (segmentation custom labelled data) inside "yolov7-segmentation\data" folder by following mentioned structure.
-
-![ss](https://user-images.githubusercontent.com/62513924/190388927-62a3ee84-bad8-4f59-806f-1185acdc8acb.png)
+- Move your (segmentation custom labelled data) inside "trainYoloV7\data" folder by following mentioned structure.
+```
+./
+    /train/
+        /imgages/
+        /labels/
+    /valid/
+        /imgages/
+        /labels/
+    data.yaml
+    
+```
 
 
 
