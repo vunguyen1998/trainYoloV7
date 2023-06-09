@@ -99,9 +99,9 @@ python3 segment/predict.py --weights "runs/train-seg/yolov7-seg2/weights/best.pt
 }
 </style>
 <div class="result">
-  <img src="/yolov7-segmentation/runs/train-seg/yolov7-seg/val_batch0_pred.jpg">
-  <img src="/yolov7-segmentation/runs/train-seg/yolov7-seg/val_batch1_pred.jpg">
-  <img src="/yolov7-segmentation/runs/train-seg/yolov7-seg/val_batch2_pred.jpg">
+  <img src="/runs/train-seg/yolov7-seg/val_batch0_pred.jpg">
+  <img src="/runs/train-seg/yolov7-seg/val_batch1_pred.jpg">
+  <img src="/runs/train-seg/yolov7-seg/val_batch2_pred.jpg">
 </div>
 
 
