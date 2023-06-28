@@ -9,7 +9,7 @@ import torch.backends.cudnn as cudnn
 
 #..... Tracker modules......
 import skimage
-from sort_count import *
+from segment.sort_count import *
 import numpy as np
 #...........................
 from shapely.geometry import Polygon
@@ -259,7 +259,7 @@ def run(
         LOGGER.info(f"Results saved to {colorstr('bold', save_dir)}{s}")
     if update:
         strip_optimizer(weights[0])  # update model (to fix SourceChangeWarning)
-
+    return save_path, f'{txt_path}_area.txt'
 
 def parse_opt():
     parser = argparse.ArgumentParser()
@@ -300,9 +300,10 @@ def parse_opt():
 
 def main(opt):
     check_requirements(exclude=('tensorboard', 'thop'))
-    run(**vars(opt))
+    return run(**vars(opt))
 
+# get_agr('file model.pt')
+# if __name__ == "__main__":
+#     opt = parse_opt()
 
-if __name__ == "__main__":
-    opt = parse_opt()
-    main(opt)
+#     main(opt)
